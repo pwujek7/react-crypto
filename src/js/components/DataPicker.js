@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CurrencyCard from './CurrencyCard.js';
+
 class DataPicker extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,6 @@ class DataPicker extends React.Component {
     fetch(URL)
       .then(response => response.json())
       .then(response => {
-        console.log(response);
         this.setState({data: response});
       });
   }
@@ -25,8 +26,12 @@ class DataPicker extends React.Component {
   }
 
   render() {
+    let cards = this.state.data.map(c => <CurrencyCard curr={c} key={c.id} />);
+
     return (
-      <div />
+      <div>
+        {cards}
+      </div>
     )
   }
 }
