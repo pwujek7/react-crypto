@@ -13,16 +13,26 @@ class DataPicker extends React.Component {
 
   fetchData() {
     const URL = "https://api.coinmarketcap.com/v1/ticker/";
+    const CURRENCIES = ["bitcoin", "ethereum", "ripple", "bitcoin-cash",
+                        "cardano", "litecoin", "dash", "bitcoin-gold", "lisk", "verge"];
 
     fetch(URL)
       .then(response => response.json())
       .then(response => {
-        this.setState({data: response});
+        let result = [];
+
+        for (let i = 0; i < response.length; i++) {
+          if (CURRENCIES.includes(response[i].id)) {
+            result.push(response[i]);
+          }
+        }
+
+        this.setState({data: result});
       });
   }
 
   componentDidMount() {
-    this.fetchData();
+    let picker = setInterval(this.fetchData.bind(this), 10000);
   }
 
   render() {
