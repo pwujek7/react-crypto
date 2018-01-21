@@ -39,9 +39,9 @@ class DataPicker extends React.Component {
     let cards = this.state.data.map(c => <CurrencyCard curr={c} key={c.id} />);
 
     return (
-      <div>
+      <section>
         {cards}
-      </div>
+      </section>
     )
   }
 }
