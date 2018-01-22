@@ -2,8 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>Data provided by <a href="https://coinmarketcap.com/" target="_blank">CoinMarketCap</a> API </p>
+    <footer className="footer">
+      <p className="footer__txt">Data provided by 
+        <a className="footer__txt--link" href="https://coinmarketcap.com/" target="_blank"> CoinMarketCap</a> API
+      </p>
     </footer>
   )
 };
