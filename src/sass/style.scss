@@ -2,6 +2,7 @@ $dark-blue: #0c1821;
 $navy-blue: #1b2a41;
 $gray-blue: #324a60;
 $gray: #cdcadd;
+$light-gray: #efeef4;
 $white: #ffffff;
 $red: #c81d25;
 
@@ -52,7 +53,6 @@ $ft-oxygen: Oxygen, sans-serif;
       text-decoration: none;
       font-family: $ft-oswald;
       font-size: 16px;
-      font-weight: normal;
 
       &:link {
         color: $white;
@@ -69,6 +69,62 @@ $ft-oxygen: Oxygen, sans-serif;
       &:active {
         color: $white;
       }
+    }
+  }
+}
+
+.cards-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 350px;
+  background-color: $light-gray;
+  border: 3px solid $gray-blue;
+  border-radius: 10px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+  &__row {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+
+    &--between {
+      padding: 20px;
+      justify-content: space-between;
+    }
+  }
+
+  &__txt {
+    color: $navy-blue;
+    font-family: $ft-oswald;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+
+    &--price {
+      color: $gray-blue;
+      font-family: $ft-oxygen;
+      font-weight: normal;
+    }
+
+    &--percent {
+      font-family: $ft-oxygen;
+      font-weight: normal;
+    }
+
+    &--small {
+      font-size: 16px;
     }
   }
 }
