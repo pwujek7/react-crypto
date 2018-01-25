@@ -5,6 +5,7 @@ $gray: #cdcadd;
 $light-gray: #efeef4;
 $white: #ffffff;
 $red: #c81d25;
+$green: #25c81d;
 
 $ft-oswald: Oswald, sans-serif;
 $ft-oxygen: Oxygen, sans-serif;
@@ -74,9 +75,10 @@ $ft-oxygen: Oxygen, sans-serif;
 }
 
 .cards-section {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -86,7 +88,7 @@ $ft-oxygen: Oxygen, sans-serif;
   background-color: $light-gray;
   border: 3px solid $gray-blue;
   border-radius: 10px;
-  margin: 25px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,19 +114,22 @@ $ft-oxygen: Oxygen, sans-serif;
     line-height: 20px;
     font-weight: bold;
 
-    &--price {
+    &--number {
       color: $gray-blue;
       font-family: $ft-oxygen;
       font-weight: normal;
     }
 
     &--percent {
-      font-family: $ft-oxygen;
-      font-weight: normal;
+      font-size: 16px;
     }
 
-    &--small {
-      font-size: 16px;
+    &--green {
+      color: $green;
+    }
+
+    &--red {
+      color: $red;
     }
   }
 }
