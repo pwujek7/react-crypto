@@ -133,15 +133,23 @@ $ft-oxygen: Oxygen, sans-serif;
       color: $red;
     }
   }
+}
 
-  &__circle {
-    width: 67px;
-    height: 67px;
-    border-radius: 50%;
-    background-color: $gray-blue;
-    position: absolute;
-    left: 50%;
-    top: -67px;
-    transform: translate(-50%, 33.5px);
+.logo-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid $gray-blue;
+  position: absolute;
+  left: 50%;
+  top: -64px;
+  transform: translate(-50%, 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    width: 100%;
+    height: 100%;
   }
 }

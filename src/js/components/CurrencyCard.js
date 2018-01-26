@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Logo from './Logo.js';
+
 class CurrencyCard extends React.Component {
 
   render() {
@@ -27,7 +29,7 @@ class CurrencyCard extends React.Component {
             )}
           </p>
         </div>
-        <div className="card__circle"></div>
+        <Logo source={require(`./../../images/${id}.png`)} alter={`${name} image`}/>
       </div>
     )
   }
