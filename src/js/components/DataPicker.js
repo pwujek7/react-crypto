@@ -14,7 +14,8 @@ class DataPicker extends React.Component {
   fetchData() {
     const URL = "https://api.coinmarketcap.com/v1/ticker/";
     const CURRENCIES = ["bitcoin", "ethereum", "ripple", "bitcoin-cash",
-                        "cardano", "litecoin", "dash", "bitcoin-gold", "lisk", "verge"];
+                        "cardano", "litecoin", "neo", "dash", "bitcoin-gold",
+                        "qtum", "omisego", "ardor" ];
 
     fetch(URL)
       .then(response => response.json())

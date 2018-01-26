@@ -27,6 +27,7 @@ class CurrencyCard extends React.Component {
             )}
           </p>
         </div>
+        <div className="card__circle"></div>
       </div>
     )
   }
