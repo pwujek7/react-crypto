@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CurrencyCard from './CurrencyCard.js';
+import Loader from './Loader.js';
 
 class DataPicker extends React.Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class DataPicker extends React.Component {
 
     return (
       <section className="cards-section">
-        {cards}
+        { this.state.data.length > 0 ? cards : <Loader /> }
       </section>
     )
   }

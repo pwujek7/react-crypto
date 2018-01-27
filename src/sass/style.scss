@@ -153,3 +153,50 @@ $ft-oxygen: Oxygen, sans-serif;
     height: 100%;
   }
 }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__bar {
+    display: inline-block;
+    width: 10px;
+    height: 50px;
+    margin: 0px 2.5px;
+    animation: loading 1.2s ease-in-out infinite;
+
+    &:nth-child(1) {
+      background-color: $dark-blue;
+      animation-delay: 0;
+    }
+
+    &:nth-child(2) {
+      background-color: $navy-blue;
+      animation-delay: .12s;
+    }
+
+    &:nth-child(3) {
+      background-color: $gray-blue;
+      animation-delay: .24s;
+    }
+
+    &:nth-child(4) {
+      background-color: $gray;
+      animation-delay: .36s
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 1.8);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
