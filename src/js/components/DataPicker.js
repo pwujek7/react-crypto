@@ -30,11 +30,16 @@ class DataPicker extends React.Component {
         }
 
         this.setState({data: result});
-      });
+      })
+      .catch(error => console.error('Error: ', error))
   }
 
   componentDidMount() {
-    let picker = setInterval(this.fetchData.bind(this), 10000);
+    this.picker = setInterval(this.fetchData.bind(this), 10000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.picker);
   }
 
   render() {
